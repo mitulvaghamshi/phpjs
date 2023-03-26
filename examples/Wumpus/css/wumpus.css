@@ -1,0 +1,54 @@
+/* define default behavior of text and background of the page */
+body {
+    background-color: darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    color: silver;
+}
+
+/* font and its size for all input elements */
+input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+}
+
+/* set table margin auto to make it centered in the page */
+table {
+    margin: auto;
+}
+
+/* collapse borders of adjacent cells */
+table,
+td,
+th {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* table header bg and text color */
+th {
+    background-color: rgb(95, 95, 95);
+    color: white;
+}
+
+/* custom anchor link look */
+a {
+    text-decoration: none;
+    color: silver;
+    display: block;
+    padding: 30px;
+    margin: 5px;
+    background-color: gray;
+}
+
+/* change bg color of cells on mouse hover */
+td:hover {
+    background-color: silver;
+}
+
+/* create a fixed width contaner */
+#container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}

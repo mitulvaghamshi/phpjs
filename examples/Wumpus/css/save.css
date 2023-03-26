@@ -1,0 +1,118 @@
+/* form container layout */
+.form-container {
+    margin: auto;
+    margin-top: 20px;
+    width: fit-content;
+    text-align: center;
+    border-top: 5px solid silver;
+}
+
+/* list item look with circular border */
+.list-item {
+    border: solid 3px mediumseagreen;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    list-style-type: none;
+    font-size: large;
+    color: white;
+    display: block;
+    padding: 3px;
+}
+
+/* remove default padding from left in un-ordered list */
+ul {
+    padding-inline-start: 0px;
+}
+
+/* page heading */
+h5 {
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    padding: 3px;
+    margin: auto;
+    width: fit-content;
+}
+
+/* components of a list item */
+.user,
+.states,
+.date {
+    display: inline-block;
+    padding: 10px;
+    background-color: mediumseagreen;
+    border-radius: 30px 0px 0px 30px;
+    text-align: center;
+    font-size: 14pt;
+    line-height: 30px;
+}
+
+/* email address look */
+.user {
+    width: 400px;
+    text-align: left;
+}
+
+/* current player bg color */
+.you {
+    background-color: dodgerblue;
+}
+
+/* player win and lose container */
+.states {
+    width: 200px;
+    text-align: left;
+    border-radius: 0px 30px 30px 0px;
+    background-color: aliceblue;
+}
+
+/* play date look */
+.date {
+    width: 220px;
+    border-radius: 0px;
+    background-color: cornflowerblue;
+}
+
+/* player wins in green color */
+.wins {
+    color: rgb(0, 148, 0);
+}
+
+/* player losses in red color */
+.losses {
+    color: rgb(255, 0, 0);
+}
+
+/* play-again button look */
+input[type="button"] {
+    margin-left: 20px;
+    margin-top: 0px;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 30px;
+    color: white;
+    background-color: darkorange;
+}
+
+/* for all non desktop devices */
+@media(max-width: 986px) {
+    .list-item {
+        border-radius: 10px;
+        text-align: left;
+        width: auto;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .user {
+        width: max-content;
+    }
+
+    .user,
+    .states,
+    .date {
+        border-radius: 10px;
+        margin: 10px;
+        display: inline-block;
+    }
+}
