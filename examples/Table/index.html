@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML Table</title>
+	<style>
+		.cell {
+			width: 10%;
+			text-align: center;
+			padding: 10px 5px 10px 5px;
+		}
+
+		.header {
+			color: white;
+			background-color: #888888;
+		}
+
+		.col1 {
+			width: 7em;
+			background-color: #ddeeff;
+		}
+
+		.c1 {
+			background-color: lightskyblue;
+		}
+
+		.c2 {
+			background-color: #adff2f;
+		}
+
+		.c3 {
+			background-color: #ba55d3;
+		}
+
+		.c4 {
+			background-color: #ffb6c1;
+		}
+
+		.c5 {
+			background-color: lavender;
+		}
+
+	</style>
+</head>
+
+<body>
+	<table>
+		<colgroup>
+			<col class="col1">
+			<col>
+			<col>
+			<col>
+			<col>
+			<col>
+			<col>
+			<col>
+		</colgroup>
+		<thead class="header">
+			<tr>
+				<th class="cell">Day</th>
+				<th class="cell">7 am - 9 am</th>
+				<th class="cell">9 am - 11 am</th>
+				<th class="cell">11 am - 12 pm</th>
+				<th class="cell">12 pm - 2 pm</th>
+				<th class="cell">2 pm - 4 pm</th>
+				<th class="cell">6 pm - 8 pm</th>
+				<th class="cell">8 pm - 10 pm</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="cell">Monday</th>
+				<td class="cell c5" colspan="7">Reserved for groups</td>
+			</tr>
+			<tr>
+				<th class="cell">Tuesday</th>
+				<td class="cell c3">Bicycle Repair</td>
+				<td class="cell c1" colspan="4">Beginner Cycling</td>
+				<td class="cell c4" colspan="2">Trip Planing</td>
+			</tr>
+			<tr>
+				<th class="cell">Wednesday</th>
+				<td class="cell c2" rowspan="2">Long Distance Cycling Part 1</td>
+				<td class="cell"></td>
+				<td class="cell c1">Beginner Cycling</td>
+				<td class="cell c4" rowspan="2">Trip Planing for Asia</td>
+				<td class="cell c3" rowspan="3" colspan="2">Bicycle Rapair</td>
+				<td class="cell c2" rowspan="2">Long Distance Cycling Part 2</td>
+			</tr>
+			<tr>
+				<th class="cell">Thursday</th>
+				<td class="cell c1">Beginner Cycling</td>
+				<td class="cell"></td>
+			</tr>
+			<tr>
+				<th class="cell">Friday</th>
+				<td class="cell c4" rowspan="4">Trip Planing for Europe</td>
+				<td class="cell"></td>
+				<td class="cell c1">Beginner Cycling</td>
+				<td class="cell"></td>
+				<td class="cell"></td>
+			</tr>
+			<tr>
+				<th class="cell">Saturday</th>
+				<td class="cell c3" colspan="3" rowspan="2">Bicycle Rapair</td>
+				<td class="cell c1">Beginner Cycling</td>
+				<td class="cell c2" colspan="2" rowspan="2">Long Distance Cycling Part 1 and 2</td>
+			</tr>
+			<tr>
+				<th class="cell">Sunday</th>
+				<td class="cell"></td>
+			</tr>
+			<tr>
+				<th class="cell">Holidays</th>
+				<td class="cell c2">Long Distance Cycling</td>
+				<td class="cell c5" colspan="5">No Seminars</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>
