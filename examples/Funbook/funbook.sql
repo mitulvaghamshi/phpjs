@@ -1,21 +1,55 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Aug 19, 2022 at 02:58 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
--- Database: `000821600`
--- Table structure for table `imagelist`
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
+-- Database: `funbook`
+
+-- Table structure for table `userdata`
+CREATE TABLE `userdata` (
+  `userId` varchar(30) NOT NULL REFERENCES `user` (`username`),
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `type` tinyint(1) NOT NULL,
+  `data` varchar(1000) NOT NULL,
+  `likes` int(11) NOT NULL,
+  `dislikes` int(11) NOT NULL
+) ENGINE=InnoDB;
+
+-- Table structure for table `user`
+CREATE TABLE `user` (
+  `username` varchar(300) NOT NULL,
+  `email` varchar(300) NOT NULL,
+  `password` varchar(300) NOT NULL,
+  `dob` datetime NOT NULL,
+  `gender` int(10) NOT NULL
+) ENGINE=InnoDB;
+
+-- Dumping data for table `user`
+INSERT INTO `user` (`username`, `email`, `password`, `dob`, `gender`) VALUES
+('Mitul', 'mitul@email.com', '$2y$10$8SSh2xQQhbRmxTIEr8.mb.DMC4mwQzLtmx7jbaG63m6Y1YwCQDWpy', '2022-08-01 00:00:00', 0);
+
+-- Table structure for table `imagelist`
 CREATE TABLE `imagelist` (
   `id` int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `imageUrl` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB;
 
 -- Dumping data for table `imagelist`
-
 INSERT INTO `imagelist` (`id`, `imageUrl`) VALUES
+(1, 'https://lh4.googleusercontent.com/-e9NHZ5k5MSs/URqvMIBZjtI/AAAAAAAAAbs/1fV810rDNfQ/s1024/Yosemite%252520Tree.jpg'),
 (2, 'https://lh6.googleusercontent.com/-55osAWw3x0Q/URquUtcFr5I/AAAAAAAAAbs/rWlj1RUKrYI/s1024/A%252520Photographer.jpg'),
 (3, 'https://lh4.googleusercontent.com/--dq8niRp7W4/URquVgmXvgI/AAAAAAAAAbs/-gnuLQfNnBA/s1024/A%252520Song%252520of%252520Ice%252520and%252520Fire.jpg'),
 (4, 'https://lh5.googleusercontent.com/-7qZeDtRKFKc/URquWZT1gOI/AAAAAAAAAbs/hqWgteyNXsg/s1024/Another%252520Rockaway%252520Sunset.jpg'),
@@ -113,7 +147,10 @@ INSERT INTO `imagelist` (`id`, `imageUrl`) VALUES
 (96, 'https://lh6.googleusercontent.com/-DOz5I2E2oMQ/URqvKMND1kI/AAAAAAAAAbs/Iqf0IsInleo/s1024/Windmill%252520Sunrise.jpg'),
 (97, 'https://lh5.googleusercontent.com/-biyiyWcJ9MU/URqvKculiAI/AAAAAAAAAbs/jyPsCplJOpE/s1024/Windmill.jpg'),
 (98, 'https://lh4.googleusercontent.com/-PDT167_xRdA/URqvK36mLcI/AAAAAAAAAbs/oi2ik9QseMI/s1024/Windmills.jpg'),
-(99, 'https://lh5.googleusercontent.com/-kI_QdYx7VlU/URqvLXCB6gI/AAAAAAAAAbs/N31vlZ6u89o/s1024/Yet%252520Another%252520Rockaway%252520Sunset.jpg'),
-(100, 'https://lh4.googleusercontent.com/-e9NHZ5k5MSs/URqvMIBZjtI/AAAAAAAAAbs/1fV810rDNfQ/s1024/Yosemite%252520Tree.jpg');
+(99, 'https://lh5.googleusercontent.com/-kI_QdYx7VlU/URqvLXCB6gI/AAAAAAAAAbs/N31vlZ6u89o/s1024/Yet%252520Another%252520Rockaway%252520Sunset.jpg');
 
 COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
